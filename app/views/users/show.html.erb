@@ -1,0 +1,19 @@
+<div class="content">
+<div class="poster">
+<%= image_tag @user.picture.url if @user.picture? %>
+</div>
+<div class="main">
+<strong><%= @user.email  %></strong>
+</div>
+<div class="details">
+<% if current_user.id == @user.id %>
+<% else %>
+<div id="choices">
+    <%= render 'home/choice' %>
+ </div>
+ 
+ <% end %>
+ </div>
+ </div>
+ </div>
+ 
